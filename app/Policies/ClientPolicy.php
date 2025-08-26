@@ -4,8 +4,13 @@ namespace App\Policies;
 
 use App\Models\Client;
 use App\Models\User;
+<<<<<<< HEAD
 
 // TODO: add user related authorization
+=======
+use Illuminate\Auth\Access\Response;
+
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
 class ClientPolicy
 {
     /**
@@ -13,7 +18,11 @@ class ClientPolicy
      */
     public function viewAny(User $user): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 
     /**
@@ -21,7 +30,11 @@ class ClientPolicy
      */
     public function view(User $user, Client $client): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 
     /**
@@ -29,7 +42,11 @@ class ClientPolicy
      */
     public function create(User $user): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 
     /**
@@ -37,7 +54,11 @@ class ClientPolicy
      */
     public function update(User $user, Client $client): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 
     /**
@@ -45,7 +66,11 @@ class ClientPolicy
      */
     public function delete(User $user, Client $client): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 
     /**
@@ -53,7 +78,11 @@ class ClientPolicy
      */
     public function restore(User $user, Client $client): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 
     /**
@@ -61,6 +90,10 @@ class ClientPolicy
      */
     public function forceDelete(User $user, Client $client): bool
     {
+<<<<<<< HEAD
         return true;
+=======
+        return false;
+>>>>>>> 6b108de9314e357a17973e19c3251c8026c7f1ea
     }
 }
