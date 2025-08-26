@@ -4,8 +4,8 @@ TODO
 
 ## Backend
 
-- [] Create Client model with migration, factory, resource controller, requests, JSON resource and policy: `php artisan make:model Client -mfcrR --policy && php artisan make:resource ClientResource`
-- [] Define table structure
+- [x] Create Client model with migration, factory, resource controller, requests, JSON resource and policy: `php artisan make:model Client -mfcrR --policy && php artisan make:resource ClientResource`
+- [x] Define table structure
 - [] Create actions: **Create, Update, Delete**
 - [] Add events for actions
 - [] Add policy logic
