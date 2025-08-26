@@ -43,6 +43,21 @@ class MakeFeatureCommand extends Command
             'name' => $resource,
         ]);
 
+        $this->call('make:action', [
+            'name' => $model.'/Create'.$model.'Action',
+            '--model' => $model,
+        ]);
+
+        $this->call('make:action', [
+            'name' => $model.'/Update'.$model.'Action',
+            '--model' => $model,
+        ]);
+
+        $this->call('make:action', [
+            'name' => $model.'/Delete'.$model.'Action',
+            '--model' => $model,
+        ]);
+
         $this->info("✅ Feature scaffolding for {$model} created successfully!");
     }
 }
