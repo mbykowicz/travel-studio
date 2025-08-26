@@ -6,10 +6,10 @@ TODO
 
 - [x] Create Client model with migration, factory, resource controller, requests, JSON resource and policy: `php artisan make:model Client -mfcrR --policy && php artisan make:resource ClientResource`
 - [x] Define table structure
-- [] Create actions: **Create, Update, Delete**
-- [] Add events for actions
-- [] Add policy logic
-- [] Add form request validation
+- [x] Create actions: **Create, Update, Delete**
+- [x] Add events for actions
+- [x] Add policy logic
+- [x] Add form request validation
 - [] Add controller logic
 - [] Add resource route
 - [] Add JSON resource

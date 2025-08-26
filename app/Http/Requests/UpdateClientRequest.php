@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Route;
 
 class UpdateClientRequest extends FormRequest
 {
@@ -21,8 +22,12 @@ class UpdateClientRequest extends FormRequest
      */
     public function rules(): array
     {
+        $uuid = Route::current()->parameter('client')?->uuid;
+
         return [
-            //
+            'name' => 'required|string|max:50',
+            'phone' => 'nullable|string|max:20',
+            'email' => 'nullable|email|max:150|unique:clients,email,{$uuid},uuid',
         ];
     }
 }
