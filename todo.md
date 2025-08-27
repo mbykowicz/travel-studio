@@ -11,8 +11,9 @@ TODO
 - [x] Add policy logic
 - [x] Add form request validation
 - [] Add controller logic
-- [] Add resource route
-- [] Add JSON resource
+- [x] Add resource route
+- [x] Add JSON resource
+- [] Define factory
 
 ## Frontend
 

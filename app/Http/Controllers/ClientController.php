@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 use App\Models\Client;
+use Illuminate\Support\Facades\Gate;
+use Inertia\Inertia;
 
 class ClientController extends Controller
 {
@@ -13,7 +15,13 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        Gate::authorize('viewAny', Client::class);
+
+        $clients = Client::query()->latest()->paginate(25);
+
+        return Inertia::render('clients/index', [
+            'clients' => $clients->toResourceCollection(),
+        ]);
     }
 
     /**
@@ -37,7 +45,13 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        //
+        Gate::authorize('view', $client);
+
+        $client = Client::query()->firstOrFail();
+
+        return Inertia::render('clients/show', [
+            'client' => $client->toResource(),
+        ]);
     }
 
     /**

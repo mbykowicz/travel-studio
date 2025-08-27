@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 trait HasPublicUuid
 {
-    protected $hidden = ['id'];
+    // protected $hidden = ['id'];
 
     protected static function bootHasPublicUuid(): void
     {
