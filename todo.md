@@ -10,17 +10,18 @@ TODO
 - [x] Add events for actions
 - [x] Add policy logic
 - [x] Add form request validation
-- [] Add controller logic
+- [x] Add controller logic
 - [x] Add resource route
 - [x] Add JSON resource
-- [] Define factory
+- [x] Define factory
 
 ## Frontend
 
-- [] Create types/client.ts
+- [x] Create `types/client.ts`
 - [] Create `clients/index.tsx` page
-- [] Create `clients/blocks/*.tsx` - components specific to clients page
+- [] Create `clients/show.tsx` page
 - [] Create `clients/form.tsx`
+- [] Create `clients/blocks/*.tsx` - components specific to clients page
 - [] Create `clients/modal/create-dialog.tsx`
 - [] Create `clients/modal/update-dialog.tsx`
 - [] Create `clients/modal/delete-dialog.tsx`

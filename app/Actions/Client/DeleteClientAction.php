@@ -8,13 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class DeleteClientAction
 {
-    public function execute(Client $client): Client
+    public function execute(Client $client): int
     {
-        DB::transaction(function () use ($client): void {
-            $client->delete();
+        $result = DB::transaction(function () use ($client): int {
+            return $client->delete();
         });
         event(new ClientDeleted($client));
 
-        return $client;
+        return $result;
     }
 }
